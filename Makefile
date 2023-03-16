@@ -69,3 +69,17 @@ doublylinkedlist:
 	@echo ======================================================
 	@echo
 	./doublylinkedlist
+
+Generalizedlinkedlist:
+	@echo
+	@echo =============================
+	@echo      LISTA GENERALIZADA   
+	@echo =============================
+	@echo Compilando o programa Generalizedlinkedlist
+	gcc --std=c99 -DLOG_USE_COLOR log.h log.c GeneralizedLinkedList.h GeneralizedLinkedList.c GeneralizedLinkedListTest.c -o generalizedlinkedlist
+	@echo Tornando o arquivo executável
+	chmod +x generalizedlinkedlist
+	@echo Executando o programa Generalizedlinkedlist
+	@echo ======================================================
+	@echo
+	./generalizedlinkedlist
