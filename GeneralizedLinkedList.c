@@ -10,34 +10,47 @@ int addAtom(Node **list, int atom){
         no->type = 0;
         no->atomList.atom = atom;
         no->next = NULL;
+            if(*list == NULL){
+               *list = no;
+            }else{
+                Node *aux = NULL;
+                for(aux = *list; aux->next!=NULL; aux = aux->next);
+                aux->next= no;
+            }
         return 1;
 }
 
 int addList(Node **list, Node **subList){
-    Node *aux = (Node*)malloc(sizeof(Node));
-    if(aux == NULL) return -1;
-    aux->type = 1;
-    aux->atomList.list = subList;
-    aux->next = NULL;
+    Node *no = (Node*)malloc(sizeof(Node));
+    if(no == NULL) return -1;
+    no->type = 1;
+    no->atomList.list = *subList;
+    no->next = NULL;
+            if(*list == NULL){
+               *list = no;
+            }else{
+                Node *aux = NULL;
+                for(aux = *list; aux->next!=NULL; aux = aux->next);
+                aux->next= no;
+            }
     return 1;
 }
-Node* head(Node *list){
+/*Node* head(Node *list){
     Node *aux = (Node*)malloc(sizeof(Node));
     aux->list->next;
  return aux;
 }
 
-Node* tail(Node *list){
+/*Node* tail(Node *list){
     Node *aux = (Node*)malloc(sizeof(Node));
     aux->list->NULL;
  return aux;
-}
+}*/
 void show(Node *list){
-    Node *aux = (Node*)malloc(sizeof(Node));
-    aux = list;
-    while(aux!= NULL){
-        printf("%p", &aux);
+    Node *aux = list;
+    while(aux!=NULL){
         aux->next;
+        printf("(%p)", aux);
     }
     printf("/n");
 }

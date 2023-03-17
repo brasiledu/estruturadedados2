@@ -1,4 +1,4 @@
-/*#include <stdlib.h>
+#include <stdlib.h>
 #include <stdio.h>
 #include "GeneralizedLinkedList.h"
 #include "log.h"
@@ -38,7 +38,7 @@ int main() {
 
     //    printf("%d\n",listaGeneralizada->prox->prox->atomList.lista->atomList.atomo);
     
-    printf("\nLista: ");
+   /* printf("\nLista: ");
     showGeneralizedList(listaGeneralizada);
     printf("\nProfundidade: %d\n",depth(listaGeneralizada));
     
@@ -53,6 +53,6 @@ int main() {
     printf("\n\nLista: ");
     showGeneralizedList(head(tail(tail(listaGeneralizada))));
     printf("\nProfundidade: %d\n",depth(head(tail(tail(listaGeneralizada)))));
-    
+ */   
     return 0;
-}*/
+}
