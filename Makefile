@@ -83,3 +83,17 @@ Generalizedlinkedlist:
 	@echo ======================================================
 	@echo
 	./generalizedlinkedlist
+
+Hash:
+	@echo
+	@echo =============================
+	@echo             Hash   
+	@echo =============================
+	@echo Compilando o programa Hash
+	gcc --std=c99 -DLOG_USE_COLOR log.h log.c hash.h hash.c hashTest.c -o hash
+	@echo Tornando o arquivo executável
+	chmod +x hash
+	@echo Executando o programa Hash
+	@echo ======================================================
+	@echo
+	./hash

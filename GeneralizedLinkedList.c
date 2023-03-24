@@ -35,24 +35,36 @@ int addList(Node **list, Node **subList){
             }
     return 1;
 }
-/*Node* head(Node *list){
-    Node *aux = (Node*)malloc(sizeof(Node));
-    aux->list->next;
+ Node* head(Node *list){
+    Node *aux = NULL
+    if((list) -> type == 0){
+        aux = (Node*)malloc(sizeof(Node));
+        aux->type = 0;
+        aux->atomList.atom =(list)->atomList.atom;
+        aux->next = NULL;
+    }else{
+        aux = list->atomList.list;
+    }
  return aux;
 }
 
-/*Node* tail(Node *list){
-    Node *aux = (Node*)malloc(sizeof(Node));
-    aux->list->NULL;
- return aux;
-}*/
+Node* tail(Node *list){
+ return (list)->next;
+}
 void show(Node *list){
-    Node *aux = list;
-    while(aux!=NULL){
-        aux->next;
-        printf("(%p)", aux);
+    printf("( ")
+    Node *aux = NULL;
+    while(aux = list; aux = aux->next; aux!=NULL){
+        if(aux->type == 0){
+        printf("%d", aux->atomList.atom);
+        }
+        else{
+            show(aux->atomList.list);
+
+        }
     }
     printf("/n");
 }
-/*boole search(Node *list, int atom);
-int depth(Node *list);*/
+int depth(Node *list){
+    int dep          
+}
